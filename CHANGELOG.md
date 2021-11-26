@@ -1,3 +1,10 @@
+### [1.0.1](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.0.0...v1.0.1) (2021-11-26)
+
+
+### Bug Fixes
+
+* remove extra files from npm package output ([4914165](https://github.com/0-vortex/semantic-release-docker-mini/commit/49141651bf59e895b9cc88f0634002474e2ca01c))
+
 ## 1.0.0 (2021-11-26)
 
 
