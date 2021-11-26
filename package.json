@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "description": "semantic-release plugin to release a docker container",
+  "files": [
+    "dist/*"
+  ],
   "main": "dist/index.js",
   "author": "TED Vortex <ted.vortex@gmail.com>",
   "engines": {
