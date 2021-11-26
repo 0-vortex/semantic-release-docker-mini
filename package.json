@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-docker-mini",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "semantic-release plugin to release a docker container",
   "main": "dist/index.js",
