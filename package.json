@@ -1,0 +1,43 @@
+{
+  "name": "semantic-release-docker-mini",
+  "version": "0.0.0-development",
+  "license": "MIT",
+  "description": "semantic-release plugin to release a docker container",
+  "main": "dist/index.js",
+  "author": "TED Vortex <ted.vortex@gmail.com>",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/0-vortex/semantic-release-docker-mini/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/0-vortex/semantic-release-docker-mini/.git"
+  },
+  "homepage": "https://github.com/0-vortex/semantic-release-docker-mini",
+  "dependencies": {
+    "@semantic-release-plus/core": "*"
+  },
+  "peerDependencies": {
+    "semantic-release-plus": "^19.0.0"
+  },
+  "devDependencies": {
+    "@open-sauced/check-engines": "^1.2.0",
+    "@open-sauced/conventional-commit": "^1.0.1",
+    "@open-sauced/semantic-release-conventional-config": "^2.1.0",
+    "@types/node": "^16.11.10",
+    "@types/semver": "^7.3.9",
+    "typescript": "^4.5.2"
+  },
+  "scripts": {
+    "preinstall": "npx @open-sauced/check-engines",
+    "prestart": "npx @open-sauced/check-engines",
+    "push": "npx @open-sauced/conventional-commit",
+    "semantic-release": "npx semantic-release",
+    "build": "tsc"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
