@@ -1,3 +1,10 @@
+### [1.1.2](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.1.1...v1.1.2) (2021-11-27)
+
+
+### Bug Fixes
+
+* add typings and correct path ([e014df1](https://github.com/0-vortex/semantic-release-docker-mini/commit/e014df1d8daaf5949860471b69b02ba823a969cf))
+
 ### [1.1.1](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.1.0...v1.1.1) (2021-11-27)
 
 
