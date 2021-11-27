@@ -1,3 +1,10 @@
+### [1.2.2](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.2.1...v1.2.2) (2021-11-27)
+
+
+### Tests
+
+* use only test versions ([5663d51](https://github.com/0-vortex/semantic-release-docker-mini/commit/5663d51c45a0f91c072680202402df31d3d5240d))
+
 ### [1.2.1](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.2.0...v1.2.1) (2021-11-27)
 
 
