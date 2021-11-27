@@ -1,3 +1,10 @@
+### [1.1.3](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.1.2...v1.1.3) (2021-11-27)
+
+
+### Tests
+
+* live debug channel context ([13b941e](https://github.com/0-vortex/semantic-release-docker-mini/commit/13b941eeb2c01a5127d13328db4245674c5b12b7))
+
 ### [1.1.2](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.1.1...v1.1.2) (2021-11-27)
 
 
