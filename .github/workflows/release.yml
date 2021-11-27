@@ -37,6 +37,9 @@ jobs:
       - name: "📦 install dependencies"
         run: npm ci
 
+      - name: "📦 install dependencies"
+        run: npm run build
+
       - name: "🚀 release"
         id: release
         env:
