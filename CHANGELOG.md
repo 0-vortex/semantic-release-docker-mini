@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.1.3...v1.2.0) (2021-11-27)
+
+
+### Features
+
+* implement publish channel information ([fca2698](https://github.com/0-vortex/semantic-release-docker-mini/commit/fca269889bf764308cdff3c96149cc0edba64bd1))
+
 ### [1.1.3](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.1.2...v1.1.3) (2021-11-27)
 
 
