@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.0.1...v1.1.0) (2021-11-27)
+
+
+### Build System
+
+* remove install dependencies ([fc09844](https://github.com/0-vortex/semantic-release-docker-mini/commit/fc0984478231c7973d09a29454cec69901bdd514))
+
 ### [1.0.1](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.0.0...v1.0.1) (2021-11-26)
 
 
