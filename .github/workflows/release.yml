@@ -4,12 +4,14 @@ on:
   push:
     branches:
       - main
+      - alpha
+      - beta
 
 jobs:
   release:
     environment:
-      name: npm
-      url: https://www.npmjs.com/package/@${{ github.repository }}/v/${{ steps.release.outputs.version }}
+      name: production
+      url: https://github.com/${{ github.repository }}/releases/tag/v${{ steps.release.outputs.version }}
     name: Semantic release
     runs-on: ubuntu-latest
     steps:
@@ -18,24 +20,21 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: "☁️ checkout repository"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: "🔧 setup node"
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: 14
-
-      - name: "🔧 setup cache"
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/npm-shrinkwrap.json', '**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 16
 
       - name: "🔧 install npm@latest"
         run: npm i -g npm@latest
 
       - name: "📦 install dependencies"
-        run: npm ci
+        uses: bahmutov/npm-install@v1
 
       - name: "📦 install dependencies"
         run: npm run build
