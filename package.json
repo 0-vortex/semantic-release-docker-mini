@@ -4,9 +4,10 @@
   "license": "MIT",
   "description": "semantic-release plugin to release a docker container",
   "files": [
-    "dist/*"
+    "dist/**/*"
   ],
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "TED Vortex <ted.vortex@gmail.com>",
   "engines": {
     "node": ">=14.0.0"
