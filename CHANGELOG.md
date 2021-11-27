@@ -1,3 +1,10 @@
+### [1.1.1](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.1.0...v1.1.1) (2021-11-27)
+
+
+### Bug Fixes
+
+* transpile production build ([db18a86](https://github.com/0-vortex/semantic-release-docker-mini/commit/db18a8663bf3a6f9062c24db0c1b349123d92caf))
+
 ## [1.1.0](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.0.1...v1.1.0) (2021-11-27)
 
 
