@@ -26,6 +26,7 @@ export async function addChannel(
   // normally we would assume the image name exactly as written in the name property
   // in this case since there is no guarantee that the image is local on the machine
   // we will prepend the registry if defined to pull from the remote registry
+  console.log(image);
 
   const channelTag = getChannel(channel);
   const imageVersionTag = `${image.name}:${version}`;
@@ -55,6 +56,15 @@ export async function addChannel(
     "docker.io": "https://hub.docker.com/r",
     "quay.io": "https://quay.io/repository"
   };
+
+  console.log({
+    name: `${registry} container (@${channelTag} dist-tag)`,
+    url: `${!image.registry ? 'docker.io/' : '' }${image.name}`.replace(
+      new RegExp('^((?:ghcr|docker).io)', 'gi'),
+      matched => replaces[matched]
+    ),
+    channel: channelTag,
+  });
 
   return {
     name: `${registry} container (@${channelTag} dist-tag)`,
