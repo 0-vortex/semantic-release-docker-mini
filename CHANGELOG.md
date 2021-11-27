@@ -1,3 +1,10 @@
+### [1.2.3](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.2.2...v1.2.3) (2021-11-27)
+
+
+### Continuous Integration
+
+* remove extra checkout step ([ec79dd9](https://github.com/0-vortex/semantic-release-docker-mini/commit/ec79dd9c973b1cc5ee6983d2f657eb0fc656c9c6))
+
 ### [1.2.2](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.2.1...v1.2.2) (2021-11-27)
 
 
