@@ -1,3 +1,10 @@
+### [1.2.1](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.2.0...v1.2.1) (2021-11-27)
+
+
+### Bug Fixes
+
+* proper resulting tag and code coverage ([a54230d](https://github.com/0-vortex/semantic-release-docker-mini/commit/a54230d8fac69c25f2a951c92211bc87f9c88240))
+
 ## [1.2.0](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.1.3...v1.2.0) (2021-11-27)
 
 
