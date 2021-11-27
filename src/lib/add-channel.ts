@@ -6,6 +6,7 @@ import {
   NormalizedPluginConfig,
   PluginConfig,
 } from './plugin-config.interface';
+import { getReleaseInfo } from "./get-release-info";
 
 export interface NewChannel {
   name: string;
@@ -26,12 +27,10 @@ export async function addChannel(
   // normally we would assume the image name exactly as written in the name property
   // in this case since there is no guarantee that the image is local on the machine
   // we will prepend the registry if defined to pull from the remote registry
-  console.log(image);
 
   const channelTag = getChannel(channel);
   const imageVersionTag = `${image.name}:${version}`;
   const imageChannelTag = `${image.name}:${channelTag}`;
-  const registry = (image.registry ||  'docker.io');
 
   // pull the image to the local machine
   const { stdout: pullStdout } = await dockerPull(imageVersionTag, context);
@@ -49,29 +48,7 @@ export async function addChannel(
   const { stdout: pushStdout } = await dockerPush(imageChannelTag, context);
   logger.log(pushStdout);
 
-  logger.log(`Added ${imageVersionTag} to tag ${channelTag} on ${registry}`);
+  logger.log(`Added ${imageVersionTag} to tag ${channelTag} on ${image.registry || 'docker.io'}`);
 
-  const replaces = {
-    "ghcr.io": "https://ghcr.io",
-    "docker.io": "https://hub.docker.com/r",
-    "quay.io": "https://quay.io/repository"
-  };
-
-  console.log({
-    name: `${registry} container (@${channelTag} dist-tag)`,
-    url: `${!image.registry ? 'docker.io/' : '' }${image.name}`.replace(
-      new RegExp('^((?:ghcr|docker).io)', 'gi'),
-      matched => replaces[matched]
-    ),
-    channel: channelTag,
-  });
-
-  return {
-    name: `${registry} container (@${channelTag} dist-tag)`,
-    url: `${!image.registry ? 'docker.io/' : '' }${image.name}`.replace(
-      new RegExp('^((?:ghcr|docker).io)', 'gi'),
-      matched => replaces[matched]
-    ),
-    channel: channelTag,
-  };
+  return getReleaseInfo(image, channelTag);
 }

@@ -1,3 +1,9 @@
-export { verifyConditions } from './lib/verify-conditions';
-export { publish } from './lib/publish';
-export { addChannel } from './lib/add-channel';
+import { verifyConditions } from './lib/verify-conditions';
+import { publish } from './lib/publish';
+import { addChannel } from './lib/add-channel';
+
+module.exports = {
+  verifyConditions,
+  publish,
+  addChannel
+}
