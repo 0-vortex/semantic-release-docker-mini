@@ -20,11 +20,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: "☁️ checkout repository"
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
       - name: "🔧 setup node"
         uses: actions/setup-node@v2.1.5
         with:
