@@ -6,7 +6,7 @@ import {
   NormalizedPluginConfig,
   PluginConfig,
 } from './plugin-config.interface';
-import { getReleaseInfo } from "./get-release-info";
+import { getReleaseInfo } from './get-release-info';
 
 export interface NewChannel {
   name: string;

@@ -3,7 +3,7 @@ export function getReleaseInfo(image, channelTag) {
 
   return {
     name: `${registry} container (@${channelTag} dist-tag)`,
-    url: `${registry}${image.name}`.replace(
+    url: `${ !image.registry ? registry + '/' : '' }${image.name}`.replace(
       new RegExp('^((?:ghcr|docker|quay).io)', 'gi'),
       matched => ({
         "ghcr.io": "https://ghcr.io",
