@@ -10,6 +10,8 @@ export async function verifyConditions(
   const { logger, env } = context;
   const {
     skipLogin,
+    user,
+    password,
     image: { registry },
   } = normalizeConfig(pluginConfig);
 
@@ -18,7 +20,7 @@ export async function verifyConditions(
     return;
   }
 
-  for (const envVar of ['DOCKER_USERNAME', 'DOCKER_PASSWORD']) {
+  for (const envVar of [user, password]) {
     if (!env || !env[envVar]) {
       throw new Error(`Environment variable ${envVar} is not set`);
     }
@@ -26,8 +28,8 @@ export async function verifyConditions(
   try {
     await dockerLogin(
       {
-        userName: env.DOCKER_USERNAME,
-        password: env.DOCKER_PASSWORD,
+        userName: env[user],
+        password: env[password],
         registry: registry,
       },
       context

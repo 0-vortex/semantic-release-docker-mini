@@ -7,10 +7,12 @@ import {
 export function normalizeConfig(
   pluginConfig: PluginConfig
 ): NormalizedPluginConfig {
-  const { name, registry, skipLogin, publishChannelTag } = {
+  const { name, registry, skipLogin, user, password, publishChannelTag } = {
     registry: '',
     skipLogin: false,
     publishChannelTag: true,
+    user: 'DOCKER_USERNAME',
+    password: 'DOCKER_password',
     ...pluginConfig,
   };
 
@@ -23,6 +25,8 @@ export function normalizeConfig(
   return {
     image: imageName,
     skipLogin,
+    user,
+    password,
     publishChannelTag,
   };
 }
