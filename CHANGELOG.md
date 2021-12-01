@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.2.3...v1.3.0) (2021-12-01)
+
+
+### Features
+
+* get login credentials from global config ([43ae1d3](https://github.com/0-vortex/semantic-release-docker-mini/commit/43ae1d3d1996c211aa05e86e460e0244a9c49c82))
+
 ### [1.2.3](https://github.com/0-vortex/semantic-release-docker-mini/compare/v1.2.2...v1.2.3) (2021-11-27)
 
 
